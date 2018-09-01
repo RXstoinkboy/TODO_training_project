@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <title>TODO project</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <i class="fas fa-search" id="search-loop"></i>
+    <div class="wrapper">
+        <!-- input area starts here -->
+        <div class="todo-input">
+            <label class="todo-input-area-label" for="todo-input-area">New task:</label>
+            <textarea id="todo-input-area" placeholder="Enter new task"></textarea>
+            <button type="submit" class="todo-submit-button">+ ADD TASK</button>
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext" rel="stylesheet">
+        </div>
+        <!-- input area ends here -->
+
+        <!-- task list starts here -->
+        <div class="todo-list">
+
+            <!-- title part -->
+            <div class="todo-list-header">
+                <h2>YOUR TASKS :</h2>
+            </div>
+
+            <!-- task part -->
+            <div class="todo-list-tasks">
+                <div class="todo-task">
+                    <div class="todo-task-first-line">
+                        <div class="todo-task-done">
+                            <i class="far fa-check-circle"></i>
+                            <i class="far fa-trash-alt"></i>
+                            <!-- <i class="fas fa-check-circle"></i> -->
+                        </div>
+                        <div class="todo-task-task">This is a first task on the list but not the last one.</div>
+                    </div>
+                    <div class="todo-task-date">Saturday, 01 September 2018</div>
+                </div>
+            </div>
+        </div>
+        <!-- task list ends here -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
