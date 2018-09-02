@@ -3,19 +3,54 @@
     padding: 0;
     font-family: 'Lato', sans-serif;
     box-sizing: border-box;
-    font-size: 6px;
+    font-size: 12px;
 }
 
 #search-loop {
     position: fixed;
     z-index: 10;
-    right: 1em;
+    right: 7%;
     top: 1em;
+}
+
+#search-loop:hover {
+    cursor: pointer;
+}
+
+.search-bar-label {
+    display: none;
+    position: fixed;
+    z-index: 10;
+}
+
+.search-bar {
+    position: fixed;
+    z-index: 10;
+    right: 7%;
+    top: 0.7em;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 5px;
+    resize: none;
+    background: linear-gradient(to bottom, rgba(243, 243, 243, 1) 0%, rgba(219, 219, 219, 1) 100%);
+    width: 0px;
+    height: 0px;
+    transition: width 0.5s ease, height 0.5s ease, padding 0.5s ease;
+}
+
+.search-bar-active {
+    width: 86%;
+    height: 10%;
+    padding: 5%;
+}
+
+body {
+    background: radial-gradient(circle, rgba(255, 255, 255, 1) 0%, rgba(135, 136, 136, 1) 100%);
 }
 
 .wrapper {
     position: relative;
-    max-width: 80%;
+    max-width: 90%;
     margin: 10% auto;
 }
 
@@ -24,7 +59,7 @@
     flex-direction: column;
     margin-bottom: 10%;
     padding: 5% 0;
-    background-color: rgb(118, 170, 201);
+    background-color: rgb(221, 101, 32);
     border-radius: 1px;
     box-shadow: 1px 1px 2px rgb(163, 165, 165);
 }
@@ -53,15 +88,19 @@ button {
     border-radius: 1px;
     margin-top: 1em;
     margin-right: 5%;
-    background-color: rgb(0, 41, 131);
+    background-color: rgba(4, 12, 29, 0.616);
     color: white;
     font-weight: bold;
+}
+
+button:hover {
+    cursor: pointer;
 }
 
 .todo-list {
     margin-bottom: 10%;
     padding: 5% 0;
-    background-color: rgb(118, 170, 201);
+    background-color: rgb(221, 101, 32);
     border-radius: 1px;
     box-shadow: 1px 1px 2px rgb(163, 165, 165);
 }
@@ -102,12 +141,17 @@ h2 {
     align-self: flex-end;
 }
 
-.todo-task-done {
+
+/* .todo-task-done {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
+} */
 
 i {
     margin: 1px 0;
+}
+
+i:hover {
+    cursor: pointer;
 }
