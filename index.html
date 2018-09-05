@@ -6,7 +6,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-
+    <link rel="stylesheet " href="https://use.fontawesome.com/releases/v5.3.1/css/all.css " integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU " crossorigin="anonymous ">
+    <link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext " rel="stylesheet ">
 </head>
 
 <body>
@@ -17,10 +18,8 @@
         <!-- input area starts here -->
         <div class="todo-input ">
             <label class="todo-input-area-label " for="todo-input-area ">New task:</label>
-            <textarea id="todo-input-area" placeholder="Enter new task "></textarea>
-            <button type="submit " class="todo-submit-button ">+ ADD TASK</button>
-            <link rel="stylesheet " href="https://use.fontawesome.com/releases/v5.3.1/css/all.css " integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU " crossorigin="anonymous ">
-            <link href="https://fonts.googleapis.com/css?family=Lato&amp;subset=latin-ext " rel="stylesheet ">
+            <textarea name="todo-input" id="todo-input-area" placeholder="Enter new task " autofocus></textarea>
+            <button type="submit" class="todo-submit-button">+ ADD TASK</button>
         </div>
         <!-- input area ends here -->
 
@@ -32,17 +31,16 @@
                 <h2>YOUR TASKS :</h2>
             </div>
 
-            <!-- task part -->
+            <!-- task part with example structure -->
             <div class="todo-list-tasks">
-                <div class="todo-task">
-                    <div class="todo-task-first-line ">
-                        <i class="far fa-check-circle "></i>
-                        <!-- <i class="fas fa-check-circle "></i> -->
-                        <div class="todo-task-task ">This is a first task on the list but not the last one.</div>
-                        <i class="far fa-trash-alt "></i>
+                <!-- <div class="todo-task">
+                    <div class="todo-task-first-line">
+                        <i class="far fa-check-circle"></i>
+                        <div class="todo-task-task">pierwsz</div>
+                        <i class="far fa-trash-alt"></i>
                     </div>
-                    <div class="todo-task-date ">Saturday, 01 September 2018</div>
-                </div>
+                    <div class="todo-task-date">Saturday, 01 September 2018</div>
+                </div> -->
             </div>
         </div>
         <!-- task list ends here -->
