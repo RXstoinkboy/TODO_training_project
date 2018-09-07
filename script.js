@@ -9,7 +9,7 @@
     let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
     // create new task on the list
-    function addTask(text) {
+    const addTask = (text) => {
 
         // todo element
         let todo = document.createElement('div');
@@ -39,7 +39,7 @@
         // todo date bar
         let date = new Date();
         let todoDate = document.createElement('div');
-        todoDate.innerHTML = `${daysOfWeek[date.getDay()]}, ${date.getDay()} ${months[date.getMonth()]} ${date.getFullYear()}`;
+        todoDate.innerHTML = `${daysOfWeek[date.getDay()]}, ${date.getDay() + 2} ${months[date.getMonth()]} ${date.getFullYear()}`;
         todoDate.classList.add('todo-task-date');
 
         // append all parts in todo element
@@ -50,18 +50,17 @@
         // append todo element in todoList
         todoList.appendChild(todo);
     };
-    document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', () => {
 
         // search bar activate
-        searchButton.addEventListener('click', function(e) {
+        searchButton.addEventListener('click', (e) => {
             searchBar.classList.toggle("active");
             console.log('wyszukiwanie włączone');
         });
 
         // submit new task
-        submitButton.addEventListener("click", function(e) {
+        submitButton.addEventListener("click", (e) => {
             e.preventDefault();
-            console.log('klikam');
             let text = document.querySelector('textarea');
             if (text.value !== "") {
                 addTask(text.value);
@@ -70,15 +69,14 @@
         });
 
         // delete task
-        todoList.addEventListener('click', function(e) {
+        todoList.addEventListener('click', (e) => {
             if (e.target.closest('#deleteIcon') !== null) {
                 e.target.closest('.todo-task').remove();
-                console.log('zadanie usunięte');
             }
         });
 
         // toggle check box for a task
-        todoList.addEventListener('click', function(e) {
+        todoList.addEventListener('click', (e) => {
             if (e.target.className === 'far fa-check-circle') {
                 e.target.closest('div').classList.toggle('taskDone');
                 e.target.closest('.todo-task').classList.toggle('check');
@@ -87,10 +85,10 @@
         });
 
         // search function
-        searchBar.addEventListener('input', function() {
+        searchBar.addEventListener('input', () => {
             let value = document.querySelector('input').value;
             let elements = todoList.querySelectorAll('.todo-task');
-            [].forEach.call(elements, function(e) {
+            [].forEach.call(elements, (e) => {
                 let text = e.querySelector('.todo-task-task').innerText;
                 if (text.indexOf(value) !== -1) {
                     e.style.setProperty('display', '');
