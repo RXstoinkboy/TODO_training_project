@@ -31,12 +31,13 @@
     z-index: 9;
     right: 10%;
     top: 1em;
-    font-size: 1.2em;
+    font-size: 1.4em;
     text-align: center;
     border: none;
     border-radius: 5px;
     resize: none;
-    background: linear-gradient(to bottom, rgba(243, 243, 243, 0.9) 0%, rgba(219, 219, 219, 0.9) 100%);
+    background: linear-gradient(to bottom, rgba(243, 243, 243, 0.95) 0%, rgba(219, 219, 219, 0.9) 100%);
+    color: rgb(58, 58, 58);
     width: 80%;
     height: 10%;
     transform: scale(0);
@@ -80,7 +81,8 @@ body {
     width: 100%;
     height: 5em;
     resize: none;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    color: rgb(58, 58, 58);
     padding: 5%;
     border: none;
     background: linear-gradient(to bottom, rgba(243, 243, 243, 1) 0%, rgba(219, 219, 219, 1) 100%);
@@ -180,7 +182,7 @@ i:hover {
 @media only screen and (min-width: 450px) {
     .wrapper {
         max-width: 300px;
-        margin: 13% auto;
+        margin: 7% auto;
     }
     #search-loop {
         right: 20%;
@@ -195,7 +197,7 @@ i:hover {
 @media only screen and (min-width: 600px) {
     .wrapper {
         max-width: 300px;
-        margin: 13% auto;
+        margin: 8% auto;
     }
     #search-loop {
         top: 5%;
@@ -213,15 +215,15 @@ i:hover {
 @media only screen and (min-width: 700px) {
     .wrapper {
         max-width: 300px;
-        margin: 11% auto;
+        margin: 7% auto;
     }
     #search-loop {
         top: 5%;
-        right: 28%;
+        right: 30%;
     }
     .search-bar {
-        width: 44%;
-        right: 28%;
+        width: 40%;
+        right: 30%;
     }
 }
 
@@ -231,7 +233,7 @@ i:hover {
 @media only screen and (min-width: 800px) {
     .wrapper {
         max-width: 300px;
-        margin: 10% auto;
+        margin: 6% auto;
     }
     #search-loop {
         top: 5%;
@@ -249,7 +251,7 @@ i:hover {
 @media only screen and (min-width: 1000px) {
     .wrapper {
         max-width: 300px;
-        margin: 8% auto;
+        margin: 4% auto;
     }
     #search-loop {
         top: 5%;
@@ -264,7 +266,7 @@ i:hover {
 @media only screen and (min-width: 1350px) {
     .wrapper {
         max-width: 300px;
-        margin: 6% auto;
+        margin: 3% auto;
     }
     #search-loop {
         top: 5%;

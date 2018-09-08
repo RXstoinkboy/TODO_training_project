@@ -55,7 +55,9 @@
         // search bar activate
         searchButton.addEventListener('click', (e) => {
             searchBar.classList.toggle("active");
-            console.log('wyszukiwanie włączone');
+            if ( searchBar.value !== '' ){
+                searchBar.value = '';
+}       
         });
 
         // submit new task
@@ -92,7 +94,6 @@
                 let text = e.querySelector('.todo-task-task').innerText;
                 if (text.indexOf(value) !== -1) {
                     e.style.setProperty('display', '');
-
                 } else {
                     e.style.setProperty('display', 'none');
                 }
