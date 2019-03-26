@@ -11,10 +11,13 @@
     z-index: 10;
     right: 8%;
     top: 1em;
+    padding: 5px;
 }
 
 #search-loop:hover {
     cursor: pointer;
+    background-color: lightgray;
+    border-radius: 50%;
 }
 
 .search-bar-label {
@@ -26,22 +29,25 @@
 .search-bar {
     position: fixed;
     z-index: 9;
-    right: 7%;
-    top: 0.7em;
-    font-size: 1.2em;
+    right: 10%;
+    top: 1em;
+    font-size: 1.4em;
     text-align: center;
     border: none;
     border-radius: 5px;
     resize: none;
-    background: linear-gradient(to bottom, rgba(243, 243, 243, 1) 0%, rgba(219, 219, 219, 1) 100%);
-    width: 0px;
-    height: 0px;
+    background: linear-gradient(to bottom, rgba(243, 243, 243, 0.95) 0%, rgba(219, 219, 219, 0.9) 100%);
+    color: rgb(58, 58, 58);
+    width: 80%;
+    height: 10%;
+    transform: scale(0);
+    transform-origin: top right;
+    transition: transform 0.3s ease;
 }
 
 .search-bar.active {
-    width: 86%;
-    height: 10%;
-    transition: height 0.5s ease;
+    transform: scale(1);
+    transition: transform 0.3s ease;
 }
 
 body {
@@ -66,16 +72,17 @@ body {
 
 .todo-input-area-label {
     font-size: 1.7em;
-    margin-bottom: 0.3em;
     margin-left: 5%;
     font-weight: bold;
+    display: flex;
 }
 
 #todo-input-area {
     width: 100%;
     height: 5em;
     resize: none;
-    font-size: 1.2em;
+    font-size: 1.4em;
+    color: rgb(58, 58, 58);
     padding: 5%;
     border: none;
     background: linear-gradient(to bottom, rgba(243, 243, 243, 1) 0%, rgba(219, 219, 219, 1) 100%);
@@ -91,10 +98,13 @@ button {
     background-color: rgba(4, 12, 29, 0.616);
     color: white;
     font-weight: bold;
+    border: solid 2px rgba(4, 12, 29, 0);
 }
 
 button:hover {
     cursor: pointer;
+    background-color: rgba(4, 12, 29, 0.416);
+    border: solid 2px rgba(4, 12, 29, 0.416);
 }
 
 .todo-list {
@@ -111,37 +121,33 @@ button:hover {
 
 h2 {
     font-size: 1.4em;
-    margin-bottom: 0.5em;
     font-weight: bold;
+}
+
+.todo-list-tasks {
+    width: 100%;
 }
 
 .todo-task {
     background: linear-gradient(to bottom, rgba(243, 243, 243, 1) 0%, rgba(219, 219, 219, 1) 100%);
-    padding: 2% 5%;
+    padding: 2% 2%;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    text-decoration: orange line-through;
-    transition: height 0.5s ease;
-}
-
-.todo-task.check {
-    text-decoration: orange line-through;
-}
-
-.todo-task.delete {
-    height: 0%;
 }
 
 .todo-task-first-line {
+    width: 100%;
     display: flex;
-    flex-direction: row;
     align-items: center;
+    justify-content: space-between;
 }
 
 .todo-task-task {
     font-size: 1.4em;
     margin-left: 0.5em;
+    word-break: break-all;
 }
 
 .todo-task-date {
@@ -151,17 +157,123 @@ h2 {
     align-self: flex-end;
 }
 
-
-/* .todo-task-done {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-} */
-
 i {
-    margin: 1px 0;
+    padding: 5px;
+    border-radius: 50%;
 }
 
 i:hover {
     cursor: pointer;
+    background-color: rgba(211, 211, 211, 0.633);
+}
+
+.taskDone {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: line-through;
+}
+
+.check {
+    background: linear-gradient(to bottom, rgba(0, 190, 100, 1) 0%, rgba(40, 130, 40, 1) 100%);
+}
+
+@media only screen and (min-width: 450px) {
+    .wrapper {
+        max-width: 300px;
+        margin: 7% auto;
+    }
+    #search-loop {
+        right: 20%;
+    }
+    .search-bar {
+        width: 60%;
+        right: 20%;
+        top: 5%;
+    }
+}
+
+@media only screen and (min-width: 600px) {
+    .wrapper {
+        max-width: 300px;
+        margin: 8% auto;
+    }
+    #search-loop {
+        top: 5%;
+        right: 25%;
+    }
+    .search-bar {
+        width: 50%;
+        right: 25%;
+    }
+}
+
+
+/* Medium devices (landscape tablets, 768px and up) */
+
+@media only screen and (min-width: 700px) {
+    .wrapper {
+        max-width: 300px;
+        margin: 7% auto;
+    }
+    #search-loop {
+        top: 5%;
+        right: 30%;
+    }
+    .search-bar {
+        width: 40%;
+        right: 30%;
+    }
+}
+
+
+/* Large devices (laptops/desktops, 992px and up) */
+
+@media only screen and (min-width: 800px) {
+    .wrapper {
+        max-width: 300px;
+        margin: 6% auto;
+    }
+    #search-loop {
+        top: 5%;
+        right: 32%;
+    }
+    .search-bar {
+        width: 36%;
+        right: 32%;
+    }
+}
+
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+
+@media only screen and (min-width: 1000px) {
+    .wrapper {
+        max-width: 300px;
+        margin: 4% auto;
+    }
+    #search-loop {
+        top: 5%;
+        right: 36%;
+    }
+    .search-bar {
+        width: 28%;
+        right: 36%;
+    }
+}
+
+@media only screen and (min-width: 1350px) {
+    .wrapper {
+        max-width: 300px;
+        margin: 3% auto;
+    }
+    #search-loop {
+        top: 5%;
+        right: 40%;
+    }
+    .search-bar {
+        width: 20%;
+        right: 40%;
+    }
 }
