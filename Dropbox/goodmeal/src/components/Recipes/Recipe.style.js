@@ -57,7 +57,6 @@ export const Title = styled.h3`
 
 export const Image = styled.img`
     object-fit: cover;
- ?
 `
 
 export const Source = styled.div`
